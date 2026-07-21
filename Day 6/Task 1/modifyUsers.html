@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modify Users</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="card">
+        <h1>
+            <i class="fas fa-edit"></i>
+            Modify Users
+        </h1>
+        <div class="table-wrapper">
+            <table id="userTable">
+                <thead>
+                    <tr>
+                        <th>FNAME</th>
+                        <th>LNAME</th>
+                        <th>AGE</th>
+                        <th>ISGRADUATED</th>
+                        <th>ACTIONS</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody"></tbody>
+            </table>
+        </div>
+        <div class="nav-buttons">
+            <a href="addUser.html" class="btn-nav btn-add-user">
+                <i class="fas fa-plus-circle"></i> Add User
+            </a>
+            <a href="searchUsers.html" class="btn-nav btn-search">
+                <i class="fas fa-search"></i> Search Users
+            </a>
+        </div>
+    </div>
+
+    <script src="modifyUsers.js"></script>
+</body>
+
+</html>

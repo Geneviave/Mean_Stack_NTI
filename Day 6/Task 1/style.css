@@ -1,0 +1,310 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.card {
+    max-width: 1100px;
+    width: 100%;
+    background: white;
+    border-radius: 24px;
+    padding: 30px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+h1 {
+    font-size: 28px;
+    color: #1a1a2e;
+    border-bottom: 3px solid #eef3f8;
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+h1 i {
+    color: #667eea;
+}
+.myForm {
+    background: #f8f9fa;
+    padding: 25px;
+    border-radius: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px 20px;
+    align-items: flex-end;
+    border: 1px solid #e9edf4;
+}
+.inputGroup {
+    flex: 1 0 150px;
+    min-width: 120px;
+}
+.inputGroup label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: #3d5775;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.inputGroup input,
+.inputGroup select {
+    width: 100%;
+    padding: 10px 14px;
+    border: 2px solid #d7dfe9;
+    border-radius: 10px;
+    font-size: 15px;
+    background: white;
+    outline: none;
+    transition: 0.2s;
+}
+.inputGroup input:focus,
+.inputGroup select:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.15);
+}
+.btn-add {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    height: 48px;
+    margin-left: auto;
+    white-space: nowrap;
+}
+.btn-add:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+}
+.nav-buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 25px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.btn-nav {
+    padding: 10px 24px;
+    border-radius: 10px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.3s;
+    border: 2px solid transparent;
+}
+.btn-add-user {
+    background: #e6f7e6;
+    color: #065f46;
+    border-color: #065f46;
+}
+.btn-add-user:hover {
+    background: #065f46;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(6, 95, 70, 0.3);
+}
+.btn-search {
+    background: #e8f0fe;
+    color: #1a56db;
+    border-color: #1a56db;
+}
+.btn-search:hover {
+    background: #1a56db;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(26, 86, 219, 0.3);
+}
+.btn-modify {
+    background: #fef3e8;
+    color: #b45309;
+    border-color: #b45309;
+}
+.btn-modify:hover {
+    background: #b45309;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(180, 83, 9, 0.3);
+}
+.table-wrapper,
+.table-search {
+    overflow-x: auto;
+    border-radius: 12px;
+    border: 1px solid #e9edf4;
+    margin: 15px 0;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    min-width: 500px;
+}
+th {
+    text-align: left;
+    padding: 14px 16px;
+    background: #f8f9fa;
+    font-weight: 700;
+    color: #1d334a;
+    border-bottom: 2px solid #dee2e6;
+}
+td {
+    padding: 12px 16px;
+    border-bottom: 1px solid #ecf0f5;
+    color: #1f3349;
+}
+tr:hover td {
+    background: #f8f9fa;
+}
+.btn-edit {
+    background: #e8f0fe;
+    color: #1a56db;
+    border: none;
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+    margin-right: 6px;
+}
+.btn-edit:hover {
+    background: #1a56db;
+    color: white;
+}
+.btn-delete {
+    background: #fde8e8;
+    color: #b13e3e;
+    border: none;
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.btn-delete:hover {
+    background: #b13e3e;
+    color: white;
+}
+.search-container {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 16px;
+    border: 1px solid #e9edf4;
+    margin-bottom: 20px;
+}
+.search-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: 15px;
+}
+.search-input {
+    flex: 1 0 160px;
+    min-width: 140px;
+}
+.search-input label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: #3d5775;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.search-input input,
+.search-input select {
+    width: 100%;
+    padding: 10px 14px;
+    border: 2px solid #d7dfe9;
+    border-radius: 10px;
+    font-size: 15px;
+    background: white;
+    outline: none;
+    transition: 0.2s;
+}
+.search-input input:focus,
+.search-input select:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.15);
+}
+.btn-search-action {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    height: 48px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+.btn-search-action:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+}
+.btn-clear {
+    background: #6c757d;
+    color: white;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    height: 48px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+.btn-clear:hover {
+    background: #5a6268;
+    transform: translateY(-2px);
+}
+@media (max-width: 700px) {
+    .card {
+        padding: 15px;
+    }
+    .myForm {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 15px;
+    }
+    .btn-add {
+        margin-left: 0;
+        justify-content: center;
+    }
+    .search-row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .nav-buttons {
+        flex-direction: column;
+    }
+    .btn-nav {
+        justify-content: center;
+    }
+    .inputGroup,
+    .search-input {
+        flex: 1 1 auto;
+    }
+}
